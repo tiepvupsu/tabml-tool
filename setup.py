@@ -27,10 +27,10 @@ setup(
     license='Apache-2.0',
     packages=find_packages(),
     include_package_data=True,
-    package_data={'d2lbookvn':['config_default.ini', 'upload_doc_s3.sh', 'upload_github.sh']},
+    package_data={'d2lbook':['config_default.ini', 'upload_doc_s3.sh', 'upload_github.sh']},
     entry_points={
         'console_scripts': [
-            'd2lbookvn = d2lbookvn.main:main',
+            'd2lbook = d2lbook.main:main',
         ]
     },
 )
