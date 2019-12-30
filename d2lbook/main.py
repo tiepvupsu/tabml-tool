@@ -1,3 +1,4 @@
+# encoding=utf8
 import argparse
 import sys
 from d2lbook.build import build
