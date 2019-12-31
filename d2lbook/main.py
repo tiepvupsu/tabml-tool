@@ -1,10 +1,13 @@
-# encoding=utf8
 import argparse
 import sys
 from d2lbook.build import build
 from d2lbook.deploy import deploy
 from d2lbook.clear import clear
 import logging
+
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 logging.basicConfig(format='[d2lbook:%(filename)s:L%(lineno)d] %(levelname)-6s %(message)s')
 logging.getLogger().setLevel(logging.INFO)
