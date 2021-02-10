@@ -6,3 +6,5 @@
 **/.ipynb_checkpoints/*
 /build/
 /demo/_build/
+
+**/.mypy_cache/
