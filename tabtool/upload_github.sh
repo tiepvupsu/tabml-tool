@@ -34,4 +34,4 @@ git config --global user.name "D2L Bot"
 git config --global user.email "muli@cs.cmu.edu"
 git add -f --all .
 git commit -am "Upload by tabtool"
-git push origin master
+git push origin main
