@@ -2,8 +2,8 @@ import os
 import sys
 import logging
 import argparse
-from d2lbook.utils import *
-from d2lbook.config import Config
+from tabtool.utils import *
+from tabtool.config import Config
 
 __all__  = ['deploy']
 

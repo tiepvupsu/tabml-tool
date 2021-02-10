@@ -26,7 +26,7 @@ linkcheck_workers = 20
 
 html_theme = 'mxtheme'
 html_theme_options = {
-    'primary_color': 'blue',
+    'primary_color': 'grey',
     'accent_color': 'deep_orange',
     'header_links': [
         HEADER_LINKS

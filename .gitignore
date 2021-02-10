@@ -1,6 +1,6 @@
 *.pdf
 *.svg
-/d2lbook.egg-info/
+/tabtool.egg-info/
 /dist/
 *.pyc
 **/.ipynb_checkpoints/*
@@ -8,3 +8,4 @@
 /demo/_build/
 
 **/.mypy_cache/
+
