@@ -1,4 +1,4 @@
-from tabtootabtooldown, common
+from tabtool import markdown, common
 import unittest
 
 _markdown_src = r'''# Test
