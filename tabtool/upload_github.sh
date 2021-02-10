@@ -33,5 +33,5 @@ git config --global push.default simple
 git config --global user.name "D2L Bot"
 git config --global user.email "muli@cs.cmu.edu"
 git add -f --all .
-git commit -am "Upload by d2lbook"
-git push origin master
+git commit -am "Upload by tabtool"
+git push origin main

@@ -3,7 +3,7 @@ import os
 import re
 import nbformat
 import logging
-from d2lbook.utils import run_cmd, find_files, split_config_str
+from tabtool.utils import run_cmd, find_files, split_config_str
 
 def generate_notebooks(config, eval_dir, colab_dir):
     """Add a colab setup code cell and then save to colab_dir"""

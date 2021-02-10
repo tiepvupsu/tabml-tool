@@ -13,10 +13,10 @@ import re
 import regex
 import subprocess
 import hashlib
-from d2lbook.utils import *
-from d2lbook.sphinx import prepare_sphinx_env
-from d2lbook.config import Config
-from d2lbook import colab
+from tabtool.utils import *
+from tabtool.sphinx import prepare_sphinx_env
+from tabtool.config import Config
+from tabtool import colab
 
 __all__  = ['build']
 
@@ -116,7 +116,7 @@ class Builder(object):
             shutil.copyfile(src, tgt)
         self._rm_tgt_files('md', 'ipynb', self.config.eval_dir)
         eval_tok = datetime.datetime.now()
-        logging.info('==d2lbook build eval== finished in %s',
+        logging.info('==tabtool build eval== finished in %s',
                      get_time_diff(eval_tik, eval_tok))
 
     # Remove target files (e.g., eval and rst) based on removed files under src
@@ -199,7 +199,7 @@ class Builder(object):
                  '-b html -c', self.config.rst_dir, self.sphinx_opts])
         tok = datetime.datetime.now()
         colab.add_button(self.config.colab, self.config.html_dir)
-        logging.info('==d2lbook build html== finished in %s',
+        logging.info('==tabtool build html== finished in %s',
                      get_time_diff(tik, tok))
 
     def colab(self):
@@ -231,7 +231,7 @@ class Builder(object):
         process_latex(self.config.tex_fname, script)
         run_cmd(['cd', self.config.pdf_dir, '&& make'])
         tok = datetime.datetime.now()
-        logging.info('==d2lbook build pdf== finished in %s',
+        logging.info('==tabtool build pdf== finished in %s',
                      get_time_diff(tik, tok))
 
     def pkg(self):
@@ -261,7 +261,7 @@ class Builder(object):
             lib_name = os.path.dirname(lib_fname)
             assert not '/' in lib_name, lib_name
             f.write('# This file is generated automatically through:\n')
-            f.write('#    d2lbook build lib\n')
+            f.write('#    tabtool build lib\n')
             f.write('# Don\'t edit it directly\n\n')
             f.write('import sys\n'+lib_name+' = sys.modules[__name__]\n\n')
 
@@ -381,13 +381,13 @@ class CharInMDCode(object):
        a code block of md.
 
        ```bash
-       pip install d2lbook
+       pip install tabtool
        ```
 
-    ii) Chars `d2lbook` (including ``) in the following sentence are all in a
+    ii) Chars `tabtool` (including ``) in the following sentence are all in a
         code block of md:
 
-        Let us install `d2lbook` first.
+        Let us install `tabtool` first.
     """
     def __init__(self, lines):
         in_code = []
